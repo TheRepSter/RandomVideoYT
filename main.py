@@ -11,7 +11,7 @@ def vid(videos):
     search_response = youtube.search().list(
         q=search,
         part='snippet',
-        maxResults=50,
+        maxResults=10,
         order="date"
         ).execute()
 
@@ -32,6 +32,7 @@ prefix = ['', 'IMG ', 'IMG_', 'IMG-', 'DSC ']
 postfix = [' MOV', '.MOV', ' .MOV', ' MP4', '.MP4', ' .MP4', " WMV", ".WMV", " .WMV", " FLV", ".FLV", " .FLV", "AVI", " .AVI", ".AVI"]
 
 while True:
+    print("newLinks")
     l = vid([])
     random.shuffle(l)
     for i in l:
